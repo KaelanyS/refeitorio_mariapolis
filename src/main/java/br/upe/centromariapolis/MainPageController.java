@@ -1,4 +1,4 @@
-package br.upe.centromariapolis.controller;
+package br.upe.centromariapolis;
 
 public class MainPageController {
 
