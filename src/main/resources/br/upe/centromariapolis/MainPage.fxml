@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.upe.centromariapolis.MainPageController">
+   <children>
+      <Text fill="#116ab4" layoutX="107.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Refeição:" />
+      <Text fill="#116ab4" layoutX="182.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Almoço" />
+      <Text layoutX="690.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Evento:" />
+      <TableView layoutX="107.0" layoutY="309.0" prefHeight="352.0" prefWidth="543.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn prefWidth="75.0" text="C2" />
+            <TableColumn prefWidth="75.0" text="C1" />
+            <TableColumn prefWidth="75.0" text="C1" />
+        </columns>
+      </TableView>
+      <Button layoutX="759.0" layoutY="441.0" mnemonicParsing="false" text="Check-in com código de barras" />
+      <Button layoutX="812.0" layoutY="493.0" mnemonicParsing="false" text="Gerar relatório" textAlignment="CENTER" />
+      <Text fill="#116ab4" layoutX="109.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DIA:" />
+      <Text fill="#116ab4" layoutX="149.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Domingo, 12 de novembro de 2023" />
+      <Text fill="#116ab4" layoutX="107.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="número de inscritos: 40" />
+      <TextField layoutX="109.0" layoutY="250.0" promptText="Digite o nome ou CPF" />
+      <Button layoutX="292.0" layoutY="250.0" mnemonicParsing="false" text="Buscar" textAlignment="CENTER" />
+      <ImageView fitHeight="52.0" fitWidth="495.0" layoutX="45.0" layoutY="32.0">
+         <image>
+            <Image url="@../../../../assets/mariapolislogo.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
