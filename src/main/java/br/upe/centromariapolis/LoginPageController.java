@@ -16,11 +16,7 @@ import javafx.stage.Stage;
 public class LoginPageController {
 
     @FXML
-    private Button bttContinue;
-    @FXML
     private MaskedTextField cpf;
-//    @FXML
-//    private TextField cpf;
     @FXML
     private Label msgError;
     @FXML
