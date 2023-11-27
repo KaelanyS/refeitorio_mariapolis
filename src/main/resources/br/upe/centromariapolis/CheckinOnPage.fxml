@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="768.0" prefWidth="1024.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.upe.centromariapolis.CheckinOnPage">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2f0f0" height="100.0" stroke="#116ab4" strokeType="INSIDE" strokeWidth="3.0" width="1024.0" />
+      <ImageView fitHeight="55.0" fitWidth="520.0" layoutX="35.0" layoutY="31.0">
+         <image>
+            <Image url="@../../../../assets/mariapolislogo.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="75.0" fitWidth="70.0" layoutX="935.0" layoutY="12.0">
+         <image>
+            <Image url="@../../../../assets/avatar.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="75.0" fitWidth="79.0" layoutX="840.0" layoutY="12.0">
+         <image>
+            <Image url="@../../../../assets/botao-home-2.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2f0f0" height="305.0" layoutX="254.0" layoutY="427.0" stroke="#46a15b" strokeType="INSIDE" strokeWidth="3.0" width="556.0" />
+      <Text fx:id="titleCheckin" fill="#116ab4" layoutX="278.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CHECK-IN COM CÓDIGO DE BARRAS" textAlignment="CENTER">
+         <font>
+            <Font name="Comic Sans MS Bold" size="25.0" />
+         </font>
+      </Text>
+      <Text fill="#116ab4" layoutX="72.0" layoutY="242.0" stroke="#116ab4" strokeType="OUTSIDE" strokeWidth="0.3" text="REFEIÇÃO:" textAlignment="CENTER">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#116ab4" layoutX="72.0" layoutY="282.0" stroke="#116ab4" strokeType="OUTSIDE" strokeWidth="0.3" text="DIA:" textAlignment="CENTER">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#116ab4" layoutX="72.0" layoutY="322.0" stroke="#116ab4" strokeType="OUTSIDE" strokeWidth="0.3" text="NÚMERO DE INSCRITOS:" textAlignment="CENTER">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#116ab4" layoutX="112.0" layoutY="282.0" stroke="#116ab4" strokeType="OUTSIDE" strokeWidth="0.3" text="Domingo, 12 de novembro de 2023" textAlignment="CENTER">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#116ab4" layoutX="162.0" layoutY="242.0" stroke="#116ab4" strokeType="OUTSIDE" strokeWidth="0.3" text="Almoço" textAlignment="CENTER">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#116ab4" layoutX="277.0" layoutY="322.0" stroke="#116ab4" strokeType="OUTSIDE" strokeWidth="0.3" text="40" textAlignment="CENTER">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <ChoiceBox layoutX="23.0" layoutY="222.0" prefHeight="26.0" prefWidth="2.0" />
+      <Text fill="#116ab4" layoutX="375.0" layoutY="475.0" stroke="#116ab4" strokeType="OUTSIDE" strokeWidth="0.3" text="Check-in realizado com sucesso!" textAlignment="CENTER">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="157.0" layoutY="365.0">
+         <image>
+            <Image url="@../../../../assets/verificado%201.png" />
+         </image>
+      </ImageView>
+      <Text fill="#116ab4" layoutX="345.0" layoutY="538.0" stroke="#116ab4" strokeType="OUTSIDE" strokeWidth="0.3" text="Refeição: Almoço" textAlignment="CENTER">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#116ab4" layoutX="345.0" layoutY="560.0" stroke="#116ab4" strokeType="OUTSIDE" strokeWidth="0.3" text="Dia: Domingo, 12 de novembro de 2023" textAlignment="CENTER">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#116ab4" layoutX="344.0" layoutY="584.0" stroke="#116ab4" strokeType="OUTSIDE" strokeWidth="0.3" text="Horário: 12h32" textAlignment="CENTER">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#116ab4" layoutX="344.0" layoutY="624.0" stroke="#116ab4" strokeType="OUTSIDE" strokeWidth="0.3" text="Acesso autorizado." textAlignment="CENTER">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <Text fill="#0909c6" layoutX="381.0" layoutY="690.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Retornando para a página de check-in...">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

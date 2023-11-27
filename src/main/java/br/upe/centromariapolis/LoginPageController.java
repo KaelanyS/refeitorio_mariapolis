@@ -1,29 +1,51 @@
 package br.upe.centromariapolis;
 
+import br.upe.centromariapolis.util.MaskedTextField;
+import br.upe.centromariapolis.util.ValidaCpf;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
 import javafx.stage.Stage;
 
 public class LoginPageController {
 
     @FXML
+    private MaskedTextField cpf;
+    @FXML
+    private Label msgError;
+    @FXML
+    private PasswordField pass;
+
+    @FXML
     public void handleLoginAction(ActionEvent event) {
-        try{
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("MainPage.fxml"));
-        Parent root = loader.load();
+        String cpfText = cpf.getText();
+        String passText = pass.getText();
 
-        Scene scene = new Scene(root);
+        String cpfLimpo = cpfText.replaceAll("[^0-9]", "");
 
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        if ( ValidaCpf.isCPF(cpfLimpo) && (passText.length() >= 6)){
+            try{
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("MainPage.fxml"));
 
-        stage.setScene(scene);
-        stage.show();
-        } catch (Exception e){
-            e.printStackTrace();
+                Parent root = loader.load();
+
+                Scene scene = new Scene(root);
+
+                Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+                stage.setScene(scene);
+                stage.show();
+            } catch (Exception e){
+                e.printStackTrace();
+            }
+        } else{
+            msgError.setText("Por favor, preencha corretamente\n todos os campos");
         }
     }
 
