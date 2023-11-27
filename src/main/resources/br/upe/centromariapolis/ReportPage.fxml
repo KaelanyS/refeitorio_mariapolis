@@ -11,8 +11,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="768.0" prefWidth="1024.0" style="-fx-background-color: #ffffff;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21">
+<AnchorPane id="AnchorPane" prefHeight="768.0" prefWidth="1024.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.upe.centromariapolis.ReportPageController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2f0f0" height="100.0" stroke="#116ab4" strokeType="INSIDE" strokeWidth="3.0" width="1024.0" />
       <ImageView fitHeight="55.0" fitWidth="520.0" layoutX="35.0" layoutY="31.0">
@@ -63,10 +62,10 @@
       <ChoiceBox layoutX="51.0" layoutY="110.0" prefHeight="26.0" prefWidth="2.0" />
       <TableView layoutX="100.0" layoutY="260.0" prefHeight="437.0" prefWidth="835.0" style="-fx-background-color: rgba(224, 236, 245, 1);">
          <columns>
-            <TableColumn prefWidth="221.6666717529297" text="C1" />
-            <TableColumn prefWidth="227.3333282470703" text="C2" />
-            <TableColumn prefWidth="218.3333282470703" text="C3" />
-            <TableColumn prefWidth="167.33334350585938" text="C4" />
+            <TableColumn prefWidth="221.6666717529297" text="CPF" />
+            <TableColumn prefWidth="227.3333282470703" text="Nome" />
+            <TableColumn prefWidth="218.3333282470703" text="Situaçao da Refeiçao" />
+            <TableColumn prefWidth="167.33334350585938" text="Hora de entrada" />
          </columns>
       </TableView>
       <Text fill="#116ab4" layoutX="100.0" layoutY="225.0" stroke="#116ab4" strokeType="OUTSIDE" strokeWidth="0.3" text="COMPARECENTES: " textAlignment="CENTER">
@@ -84,5 +83,6 @@
             <Font size="17.0" />
          </font>
       </Button>
+      <Button layoutX="727.0" layoutY="156.0" mnemonicParsing="false" onAction="#handleRetornarAction" prefHeight="41.0" prefWidth="202.0" style="-fx-background-color: #116ab4;" text="Voltar para a pagina inicial" textAlignment="CENTER" textFill="WHITE" />
    </children>
 </AnchorPane>
