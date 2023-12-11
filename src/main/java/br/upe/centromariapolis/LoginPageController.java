@@ -1,7 +1,6 @@
 package br.upe.centromariapolis;
 
-import java.io.IOException;
-
+import br.upe.centromariapolis.facade.Facade;
 import br.upe.centromariapolis.util.MaskedTextField;
 import br.upe.centromariapolis.util.ValidaCpf;
 import javafx.event.ActionEvent;
@@ -23,21 +22,21 @@ public class LoginPageController {
     @FXML
     private PasswordField pass;
 
-    private String cpfTextLabel;
+    Facade facade = new Facade();
 
     public String getCpfText() {
-        return cpfTextLabel;
+        return facade.getEmployee().getCpf();
     };
 
     @FXML
     public void handleLoginAction(ActionEvent event) {
         String cpfText = cpf.getText();
         String passText = pass.getText();
-        cpfTextLabel = cpfText;
         String cpfLimpo = cpfText.replaceAll("[^0-9]", "");
 
         if (ValidaCpf.isCPF(cpfLimpo) && (passText.length() >= 6)) {
             try {
+                facade.getEmployee().setCpf(cpfText);
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("MainPage.fxml"));
 
                 Parent root = loader.load();
