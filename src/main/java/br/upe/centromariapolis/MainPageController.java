@@ -1,14 +1,21 @@
 package br.upe.centromariapolis;
 
 import java.io.IOException;
+import java.util.List;
+
+import br.upe.centromariapolis.model.Customer;
+import br.upe.centromariapolis.repository.IRepoCustomer;
+import br.upe.centromariapolis.repository.RepoCustomer;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
@@ -26,8 +33,41 @@ public class MainPageController {
     @FXML
     private ImageView barcode;
 
+    @FXML
+    private TableView<Customer> tableViewCustomers;
+
+    @FXML
+    private TableColumn<Customer, String> tableColumnCustomerCpf;
+
+    @FXML
+    private TableColumn<Customer, String> tableColumnCustomerName;
+
+    @FXML
+    private TableColumn<Customer, Integer> tableColumnCustomerQntRefeicoes;
+
+    @FXML
+    private TableColumn<Customer, String> tableColumnCustomerTimestamp;
+
+    RepoCustomer repoCustomer = new RepoCustomer();
+    private ObservableList<Customer> observableListCustomers;
+
+    @FXML
+    public void initialize(){
+        loadTableViewCustomers();
+    }
+
     public void setLoginPageController(LoginPageController loginPageController) {
         this.loginPageController = loginPageController;
+    }
+
+    public void loadTableViewCustomers(){
+        tableColumnCustomerCpf.setCellValueFactory(new PropertyValueFactory<>("cpf"));
+        tableColumnCustomerName.setCellValueFactory(new PropertyValueFactory<>("name"));
+        tableColumnCustomerQntRefeicoes.setCellValueFactory(new PropertyValueFactory<>("qntRefeicoes"));
+        tableColumnCustomerTimestamp.setCellValueFactory(new PropertyValueFactory<>("checkInTimestamp"));
+
+        observableListCustomers = FXCollections.observableArrayList(repoCustomer.listCustomers());
+        tableViewCustomers.setItems(observableListCustomers);
     }
 
     @FXML
