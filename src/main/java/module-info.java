@@ -8,4 +8,5 @@ module br.upe.centromariapolis {
     exports br.upe.centromariapolis;
     exports br.upe.centromariapolis.util;
     opens br.upe.centromariapolis.util to javafx.fxml;
+    opens br.upe.centromariapolis.model to javafx.base;
 }
