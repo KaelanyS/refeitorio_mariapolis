@@ -9,99 +9,90 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Region?>
-<?import javafx.scene.shape.Line?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="768.0" prefWidth="1024.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.upe.centromariapolis.MainPageController">
+<AnchorPane prefHeight="768.0" prefWidth="1024.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.upe.centromariapolis.MainPageController">
    <children>
-      <TableView fx:id="tableViewCustomers" layoutX="85.0" layoutY="343.0" prefHeight="352.0" prefWidth="543.0" style="-fx-background-color: rgba(224, 236, 245, 1);">
+      <TableView layoutX="78.0" layoutY="348.0" prefHeight="352.0" prefWidth="543.0" style="-fx-background-color: #ffffff; -fx-border-color: #116ab4;">
         <columns>
-          <TableColumn fx:id="tableColumnCustomerCpf" prefWidth="75.0" text="CPF" />
-          <TableColumn fx:id="tableColumnCustomerName" prefWidth="75.0" text="Nome" />
-          <TableColumn fx:id="tableColumnCustomerQntRefeicoes" prefWidth="143.0" text="Situaçao da refeiçao" />
-          <TableColumn fx:id="tableColumnCustomerTimestamp" prefWidth="127.0" text="Hora de entrada" />
+          <TableColumn prefWidth="75.0" text="CPF" />
+          <TableColumn prefWidth="75.0" text="Nome" />
+            <TableColumn prefWidth="75.0" text="Situaçao da refeiçao" />
+            <TableColumn prefWidth="75.0" text="Hora de entrada" />
         </columns>
          <columnResizePolicy>
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
-      <Line endX="-100.0" endY="352.0" layoutX="185.0" layoutY="343.0" startX="-100.0" stroke="#116ab4" strokeWidth="2.0" />
-      <Line endX="-100.0" endY="352.0" layoutX="726.0" layoutY="343.0" startX="-100.0" stroke="#116ab4" strokeWidth="2.0" />
-      <Line endX="405.0" endY="-1.0" layoutX="220.0" layoutY="696.0" startX="-135.0" startY="-1.0" stroke="#116ab4" strokeWidth="2.0" />
-      <Line endX="405.0" endY="-1.0" layoutX="220.0" layoutY="343.0" startX="-135.0" startY="-1.0" stroke="#116ab4" strokeWidth="2.0" />
-      <Button alignment="TOP_CENTER" layoutX="724.0" layoutY="343.0" mnemonicParsing="false" onAction="#handleCheckinAction" prefHeight="130.0" prefWidth="231.0" text="Check-in com código de barras" textOverrun="CLIP">
+      <Button alignment="TOP_CENTER" layoutX="725.0" layoutY="365.0" mnemonicParsing="false" onAction="#handleCheckinAction" prefHeight="130.0" prefWidth="250.0" text="Check-in com código de barras" textFill="#116ab4" textOverrun="CLIP">
          <font>
-            <Font size="15.0" />
+            <Font name="System Bold" size="15.0" />
          </font></Button>
-      <Button layoutX="724.0" layoutY="499.0" mnemonicParsing="false" onAction="#handleRelatorioAction" prefHeight="56.0" prefWidth="231.0" text="Gerar relatório" textAlignment="CENTER">
+      <Button layoutX="725.0" layoutY="535.0" mnemonicParsing="false" onAction="#handleRelatorioAction" prefHeight="56.0" prefWidth="248.0" text="Gerar relatório" textAlignment="CENTER" textFill="#116ab4">
          <font>
-            <Font size="15.0" />
-         </font>
-      </Button>
-      <TextField layoutX="85.0" layoutY="295.0" prefHeight="26.0" prefWidth="170.0" promptText="Digite o nome ou CPF" />
-      <Button layoutX="270.0" layoutY="297.0" mnemonicParsing="false" text="Buscar" textAlignment="CENTER" />
-      <AnchorPane>
-         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2f0f0" height="100.0" stroke="#116ab4" strokeType="INSIDE" strokeWidth="3.0" width="1024.0" />
-         <HBox alignment="TOP_RIGHT" layoutX="924.0" layoutY="8.0" spacing="8.0">
-            <Region HBox.hgrow="ALWAYS" />
-            <Button fx:id="employeeButton" onAction="#navigateToEmployeePage">
-               <graphic>
-                  <ImageView fx:id="profileImage" fitHeight="60" fitWidth="60" pickOnBounds="true" preserveRatio="true" />
-               </graphic>
-            </Button>
-         </HBox>
-      </AnchorPane>
-      <ImageView fx:id="logo" fitHeight="60.0" fitWidth="500.0" layoutX="275.0" layoutY="25.0" />
-      <Text fill="#116ab4" layoutX="90.0" layoutY="145.0" stroke="#116ab4" strokeType="OUTSIDE" strokeWidth="0.3" text="REFEIÇÃO:" textAlignment="CENTER">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Text>
-      <Text fill="#116ab4" layoutX="90.0" layoutY="185.0" stroke="#116ab4" strokeType="OUTSIDE" strokeWidth="0.3" text="DIA:" textAlignment="CENTER">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Text>
-      <Text fill="#116ab4" layoutX="90.0" layoutY="225.0" stroke="#116ab4" strokeType="OUTSIDE" strokeWidth="0.3" text="NÚMERO DE INSCRITOS:" textAlignment="CENTER">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Text>
-      <Text fill="#116ab4" layoutX="130.0" layoutY="185.0" stroke="#116ab4" strokeType="OUTSIDE" strokeWidth="0.3" text="Domingo, 12 de novembro de 2023" textAlignment="CENTER">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Text>
-      <Text fill="#116ab4" layoutX="180.0" layoutY="145.0" stroke="#116ab4" strokeType="OUTSIDE" strokeWidth="0.3" text="Almoço" textAlignment="CENTER">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Text>
-      <Text fill="#116ab4" layoutX="295.0" layoutY="225.0" stroke="#116ab4" strokeType="OUTSIDE" strokeWidth="0.3" text="40" textAlignment="CENTER">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Text>
-      <ImageView fitHeight="75.0" fitWidth="70.0" layoutX="935.0" layoutY="12.0">
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <TextField layoutX="76.0" layoutY="311.0" prefHeight="26.0" prefWidth="170.0" promptText="Digite o nome ou CPF" />
+      <Button layoutX="263.0" layoutY="311.0" mnemonicParsing="false" text="Buscar" textAlignment="CENTER" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2f0f0" height="100.0" stroke="#116ab4" strokeType="INSIDE" strokeWidth="3.0" width="1024.0" />
+      <ImageView fitHeight="55.0" fitWidth="520.0" layoutX="35.0" layoutY="31.0">
          <image>
-            <Image url="@../../../../assets/avatar.png" />
+            <Image url="@../../../../assets/mariapolislogo.png" />
          </image>
       </ImageView>
       <ChoiceBox layoutX="41.0" layoutY="125.0" prefHeight="26.0" prefWidth="2.0" />
-      <ImageView fitHeight="83.0" fitWidth="110.0" layoutX="784.0" layoutY="375.0">
+      <Button layoutX="724.0" layoutY="625.0" mnemonicParsing="false" onAction="#handleImportAction" prefHeight="56.0" prefWidth="248.0" text="Importar dados" textAlignment="CENTER" textFill="#116ab4">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Label fx:id="labelImportStatus" layoutX="390.0" layoutY="210.0" prefHeight="38.0" prefWidth="231.0" textAlignment="CENTER" textFill="#002fff" />
+      <ImageView fitHeight="96.0" fitWidth="108.0" layoutX="844.0" layoutY="8.0">
          <image>
-            <Image url="@../../../../assets/barcode.png" />
+            <Image url="@../../../../assets/voltar_2.png" />
          </image>
       </ImageView>
-      <Button layoutX="724.0" layoutY="580.0" mnemonicParsing="false" onAction="#handleImportAction" prefHeight="56.0" prefWidth="231.0" text="Importar dados" textAlignment="CENTER">
+      <ImageView fitHeight="53.0" fitWidth="73.0" layoutX="939.0" layoutY="28.0">
+         <image>
+            <Image url="@../../../../assets/botao-home%20(1).png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="84.0" fitWidth="128.0" layoutX="791.0" layoutY="396.0">
+         <image>
+            <Image url="@../../../../assets/codigo-de-barras.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="187.0" layoutY="125.0" prefHeight="32.0" prefWidth="212.0" text="Almoço">
          <font>
             <Font size="15.0" />
          </font>
-      </Button>
-      <Label fx:id="labelImportStatus" layoutX="725.0" layoutY="666.0" prefHeight="38.0" prefWidth="231.0" textAlignment="CENTER" textFill="#002fff" />
+      </Label>
+      <Label layoutX="139.0" layoutY="160.0" prefHeight="32.0" prefWidth="315.0" text="Domingo, 12 de novembro de 2023">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="279.0" layoutY="200.0" prefHeight="32.0" prefWidth="315.0" text="40">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Text fill="#116ab4" layoutX="84.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Refeição:" wrappingWidth="82.66676330566406">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#116ab4" layoutX="86.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dia:" wrappingWidth="82.66676330566406">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#116ab4" layoutX="86.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Número de inscritos:" wrappingWidth="202.666748046875">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>
