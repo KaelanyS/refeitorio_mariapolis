@@ -11,7 +11,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<!--<?import br.upe.centromariapolis.util.MaskedTextField?>-->
+<?import br.upe.centromariapolis.util.MaskedTextField?>
 
 <?import javafx.scene.control.TextField?>
 <AnchorPane prefHeight="768.0" prefWidth="1024.0" style="-fx-background-color: rgba(33, 123, 205, 0.29);" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.upe.centromariapolis.LoginPageController">
@@ -22,9 +22,8 @@
          <font>
             <Font name="Comic Sans MS Bold" size="25.0" />
          </font></Text>
-            <TextField layoutX="523.0" layoutY="318.0"  />
 
-      <!--      <MaskedTextField mask="###.###.###-##" placeholder=" " fx:id="cpf" layoutX="523.0" layoutY="318.0"  />-->
+      <MaskedTextField mask="###.###.###-##" placeholder=" " fx:id="cpf" layoutX="523.0" layoutY="318.0"  />
 <!--      <TextField layoutX="523.0" layoutY="318.0" />-->
       <PasswordField fx:id="pass" layoutX="523.0" layoutY="393.0" />
       <Button layoutX="540.0" layoutY="472.0" mnemonicParsing="false" onAction="#handleLoginAction" prefHeight="33.0" prefWidth="138.0" style="-fx-background-color: #116ab4;" text="Continuar" textAlignment="CENTER" textFill="WHITE">

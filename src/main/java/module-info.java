@@ -6,8 +6,9 @@ module br.upe.centromariapolis {
     requires java.persistence;
 
     opens br.upe.centromariapolis to javafx.fxml;
+    exports br.upe.centromariapolis.entities;
     exports br.upe.centromariapolis;
     exports br.upe.centromariapolis.util;
     opens br.upe.centromariapolis.util to javafx.fxml;
-    opens br.upe.centromariapolis.model to javafx.base;
+    opens br.upe.centromariapolis.entities to javafx.base;
 }
